@@ -62,11 +62,10 @@ TRAIN_DATA = [
 
 @plac.annotations(
     model=("Model name. Defaults to blank 'en' model.", "option", "m", str),
-    output_dir=("Optional output directory", "option", "o", Path),
     n_iter=("Number of training iterations", "option", "n", int),
 )
 
-def nameEntityExtraction(text, model=None, output_dir=None, n_iter=100):
+def nameEntityExtraction(text, model=None,n_iter=100):
 	"""Load the model, setup the pipeline and train the entity recognizer"""
 	if model is not None:
 		nlp = spacy.load(model) # load existing spaCy model
@@ -131,8 +130,7 @@ def nameEntityExtraction(text, model=None, output_dir=None, n_iter=100):
 			print(ent.text + " " + ent.label_)
 			my_objects.append({'Text':ent.text,'Type':ent.label_})
 	return my_objects
-			
-			
+						
 			
 # program to find position of word in given string
 #word = '18% or 19.1% is a type of percentage value and is not a nav value'
