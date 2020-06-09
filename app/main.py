@@ -148,10 +148,6 @@ def nameEntityExtraction(text, model=None, output_dir=None, n_iter=100):
 			print(ent.text + " " + ent.label_)
 			my_objects.append({'Text':ent.text,'Type':ent.label_})
 	return my_objects
-				
-		
-if __name__ == '__main__':
-	 app.run(port=5002)
 			
 			
 			
