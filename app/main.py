@@ -1,22 +1,10 @@
-from __future__ import unicode_literals, print_function
-from flask import Flask, request
-from json import dumps
-from flask_jsonpify import jsonify
-import os
-
-import datetime as dt
 import plac
 import random
-import pandas as pd
 import spacy
+import sys
 from spacy.util import minibatch, compounding
 from pathlib import Path
-
-import pythoncom
-
-import sys
-
-import win32com.client
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
