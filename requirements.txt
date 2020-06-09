@@ -1,4 +1,0 @@
-gunicorn
-Flask
-plac
-spacy
